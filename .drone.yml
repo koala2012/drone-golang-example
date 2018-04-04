@@ -18,6 +18,7 @@ pipeline:
       - go test -v .
     when:
       event: tag
+      ref: refs/tags/reg*
 
   build_linux_amd64:
     image: golang:1.9
