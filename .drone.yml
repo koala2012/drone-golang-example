@@ -16,6 +16,8 @@ pipeline:
       - make fmt-check
       - go vet
       - go test -v .
+    when:
+      event: tag
 
   build_linux_amd64:
     image: golang:1.9
